@@ -1,5 +1,8 @@
 public class Solution {
 
+    // 装水多少取决于短的柱子，可以用暴力破解方法将每一种的方案找出来。
+    // 采取two pointer方法，two pointer方法是利用矩形高度的增加来弥补宽度减小
+    // 当移动时，我们移动更矮的那个柱子
     public int maxArea(int[] height) {
         int maxarea = 0, l = 0, r = height.length - 1;
         while (l < r) {
